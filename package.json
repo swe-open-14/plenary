@@ -1,0 +1,17 @@
+{
+	"name": "swe-open-14",
+	"version": "0.1.0",
+	"description": "Repo for content and examples shared in the daily plenary session.",
+	"main": "index.js",
+	"scripts": {
+		"build": "marp -I src -o out"
+	},
+	"keywords": [
+		"multiverse"
+	],
+	"author": "Matthew Gibbons <matthew.gibbons@multiverse.io",
+	"license": "MIT",
+	"dependencies": {
+		"@marp-team/marp-cli": "^2.4.0"
+	}
+}
