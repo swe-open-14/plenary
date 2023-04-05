@@ -1,6 +1,6 @@
 # Getting Started
 
-Start by clone this repository:
+Start by cloning this repository:
 
 ```sh
 git clone https://github.com/swe-open-14/plenary.git
