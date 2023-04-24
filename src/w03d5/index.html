@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      perspective: 4096px;
+    }
+
+    .cube {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      animation: rotate-cube 5s infinite linear;
+    }
+
+    .side {
+      position: absolute;
+      width: 50vmin;
+      height: 50vmin;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: xxx-large;
+    }
+
+    .front {
+      transform: translateZ(25vmin);
+      background-color: red;
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(25vmin);
+      background-color: orange;
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(25vmin);
+      background-color: yellow;
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(25vmin);
+      background-color: green;
+    }
+
+    .top {
+      transform: rotateX(-90deg) translateZ(25vmin);
+      background-color: blue;
+    }
+
+    .bottom {
+      transform: rotateX(90deg) translateZ(25vmin);
+      background-color: violet;
+    }
+
+    @keyframes rotate-cube {
+      0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0) scale3d(0.75, 0.75, 0.75);
+      }
+      50% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg)
+          scale3d(1.5, 1.5, 1.5);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateY(360deg)
+          scale3d(0.75, 0.75, 0.75);
+      }
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <div class="cube">
+      <div class="side front">&lt;awesome /&gt;</div>
+      <div class="side back">"Hello, World!"</div>
+      <div class="side top">HTML</div>
+      <div class="side bottom">CSS</div>
+      <div class="side left">SWE(OPEN)14</div>
+      <div class="side right">JavaScript</div>
+    </div>
+  </body>
+</html>
