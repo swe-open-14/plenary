@@ -4,7 +4,8 @@
 	"description": "Repo for content and examples shared in the daily plenary session.",
 	"main": "index.js",
 	"scripts": {
-		"build": "marp -I src -o out"
+		"build": "marp -I src -o out",
+		"test": "jest"
 	},
 	"keywords": [
 		"multiverse"
@@ -12,6 +13,13 @@
 	"author": "Matthew Gibbons <matthew.gibbons@multiverse.io",
 	"license": "MIT",
 	"dependencies": {
-		"@marp-team/marp-cli": "^2.4.0"
+		"@marp-team/marp-cli": "^2.4.0",
+		"express": "^4.18.2",
+		"sequelize": "^6.31.1",
+		"sqlite3": "^5.1.6"
+	},
+	"devDependencies": {
+		"jest": "^29.5.0",
+		"supertest": "^6.3.3"
 	}
 }
